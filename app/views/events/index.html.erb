@@ -1,1 +1,37 @@
-<h1>Welcome!</h1>
+<div class='container-fluid'>
+  <h1>Signup Event Manager</h1>
+
+  <h3>Create a new signup event or choose an existing event</h3>
+
+  <div>
+    <a href='#fakelink' class='btn btn-primary btn-lg' role='button'>
+      <span class='glyphicon-plus'></span>
+      Create New Event
+    </a>
+  </div>
+  <div class='row'>
+    <div class='col-md-8'>
+      <h3 class='space-bottom0'>
+        Events
+      </h3>
+      <table class='table'>
+        <thead>
+        <th class='quiet text-left name'>Name</th>
+        <th class='quiet text-center pad1l active'>Active</th>
+        <th class='quiet text-left pad1l signup_dates'>Signup dates</th>
+        <th class='quiet text-left pad1l event_dates'>Event dates</th>
+        </thead>
+        <tbody class='quiet-scroll'>
+        <% @events.each do |event| %>
+          <tr>
+            <td class='name'><span class='glyphicon glyphicon-trash pad1r'></span><strong><%= link_to event.name,'#fakelink' %></strong></td>
+            <td class='text-center pad1l active'><span class='glyphicon glyphicon-ok icon-success'></span></td>
+            <td class='text-left pad1l signup_dates'><%= event_dates(event.signup_start_at, event.signup_end_at) %></td>
+            <td class='text-left pad1l event_dates'><%= event_dates(event.event_start_at, event.event_end_at) %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -15,3 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+.rspec
+
+# Other files
+#############
+.byebug_history

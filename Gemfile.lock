@@ -1,10 +1,3 @@
-GIT
-  remote: git@cagit.careerbuilder.com:CorpAppsCB/kabu-rails.git
-  revision: ee6a13c134356e493515afe050096a127f1d3781
-  specs:
-    kabu-rails (1.4.10)
-      railties (>= 4.0.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,8 +37,12 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    autoprefixer-rails (7.1.6)
+      execjs
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.2.0.0)
+      sass (~> 3.2)
     builder (3.2.2)
     byebug (9.0.5)
     coffee-rails (4.1.1)
@@ -171,11 +168,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
+  bootstrap-sass (~> 3.2.0)
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  kabu-rails!
   rails (= 4.2.6)
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)

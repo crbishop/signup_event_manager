@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.find_by(owner_id: 'gcooper')
+    @events = Event.where(owner_id: 'gcooper')
   end
 end
